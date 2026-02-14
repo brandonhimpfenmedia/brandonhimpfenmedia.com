@@ -1,5 +1,8 @@
 {% assign p = include.p %}
-<article class="prop {{ p.theme }}">
+<article class="prop {{ p.theme }}"
+  data-name="{{ p.name | escape }}"
+  data-tag="{{ p.tag | downcase | escape }}"
+  data-desc="{{ p.description | escape }}">
   <div class="prop__top">
     <span class="tag {{ p.tag_class }}">{{ p.tag }}</span>
     <span class="prop__name">{{ p.name }}</span>

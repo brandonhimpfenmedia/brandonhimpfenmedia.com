@@ -1,0 +1,30 @@
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} Home">
+      <span class="brand__mark" aria-hidden="true">{% include brand-mark.svg %}</span>
+      <span class="brand__text">
+        <span class="brand__name">{{ site.title }}</span>
+        <span class="brand__tag">Independent studio for publishing systems and durable artifacts</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      {% for item in site.nav %}
+        <a class="nav__link" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+
+    <div class="actions">
+      <a class="cta" href="{{ '/#newsletter' | relative_url }}">Get the roundup</a>
+      <button class="hamburger" id="openMobile" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile" id="mobileNav" aria-label="Mobile navigation">
+    {% for item in site.nav %}
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    {% endfor %}
+  </div>
+</header>

@@ -1,0 +1,35 @@
+title: Brandon Himpfen Media
+description: Independent studio for publishing systems and durable artifacts.
+url: "https://www.brandonhimpfenmedia.com"
+baseurl: "" # if project site, set to "/repo-name"
+timezone: America/Toronto
+
+permalink: /updates/:title/
+
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: Brandon Himpfen
+      show_in_updates: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+
+nav:
+  - title: Digital properties
+    url: /#properties
+  - title: Updates
+    url: /updates/
+  - title: About
+    url: /about/

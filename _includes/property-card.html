@@ -1,0 +1,13 @@
+{% assign p = include.p %}
+<article class="prop {{ p.theme }}">
+  <div class="prop__top">
+    <span class="tag {{ p.tag_class }}">{{ p.tag }}</span>
+    <span class="prop__name">{{ p.name }}</span>
+  </div>
+  <p class="prop__desc">{{ p.description }}</p>
+  <div class="prop__links">
+    {% for link in p.links %}
+      <a href="{{ link.url }}">{{ link.label }}</a>
+    {% endfor %}
+  </div>
+</article>

@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<section class="section">
+  <div class="wrap prose">
+    <div class="postMeta">
+      <a class="inline" href="{{ '/updates/' | relative_url }}">← Updates</a>
+      <div class="postMeta__right">
+        <span class="date">{{ page.date | date: "%b %-d, %Y" }}</span>
+        {% if page.tags %}
+          <span class="dotSep">•</span>
+          <span class="tags">
+            {% for t in page.tags %}<span class="tag tag--paper">{{ t }}</span>{% endfor %}
+          </span>
+        {% endif %}
+      </div>
+    </div>
+    <h1 class="pageTitle">{{ page.title }}</h1>
+    {% if page.excerpt %}<p class="lead">{{ page.excerpt | strip_html }}</p>{% endif %}
+    {{ content }}
+  </div>
+</section>

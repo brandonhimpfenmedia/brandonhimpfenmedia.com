@@ -1,0 +1,77 @@
+- name: SoloTraveler
+  tag: Travel
+  tag_class: tag--sky
+  theme: prop--solo
+  description: Practical guidance and resources for independent travelers.
+  links:
+    - label: Visit
+      url: https://www.solotraveler.org
+    - label: Start here
+      url: https://www.solotraveler.org
+    - label: Tools
+      url: https://www.solotraveler.org
+
+- name: Bold Outlook
+  tag: Tech
+  tag_class: tag--indigo
+  theme: prop--bold
+  description: Platforms, security, AI, and digital infrastructure with tradeoffs explained.
+  links:
+    - label: Visit
+      url: https://www.boldoutlook.com
+    - label: Essays
+      url: https://www.boldoutlook.com
+    - label: Projects
+      url: https://www.boldoutlook.com
+
+- name: Awesome Lists
+  tag: Open source
+  tag_class: tag--mint
+  theme: prop--awesome
+  description: Curated resources built to behave like reference shelves, not link dumps.
+  links:
+    - label: Browse
+      url: https://www.awesomelists.io
+    - label: Manifesto
+      url: https://www.awesomelists.io
+    - label: Contribute
+      url: https://www.awesomelists.io
+
+- name: Brandon Travel
+  tag: Research
+  tag_class: tag--amber
+  theme: prop--travel
+  description: Travel intelligence: pricing, logistics, risk, and decision frameworks.
+  links:
+    - label: Visit
+      url: https://www.brandontravel.com
+    - label: Research
+      url: https://www.brandontravel.com
+    - label: Datasets
+      url: https://www.brandontravel.com
+
+- name: himpfen.com
+  tag: Studio
+  tag_class: tag--red
+  theme: prop--studio
+  description: Long-term thinking and systems analysis with practical, grounded writing.
+  links:
+    - label: Read
+      url: https://www.himpfen.com
+    - label: Topics
+      url: https://www.himpfen.com
+    - label: About
+      url: https://www.himpfen.com
+
+- name: This Week In
+  tag: Digest
+  tag_class: tag--slate
+  theme: prop--digest
+  description: Editorial digests with context. Curated, not churned.
+  links:
+    - label: Subscribe
+      url: https://thisweekin.io
+    - label: Archive
+      url: https://thisweekin.io
+    - label: Topics
+      url: https://thisweekin.io

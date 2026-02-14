@@ -1,0 +1,147 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__copy">
+      <p class="eyebrow">Platform-first studio</p>
+      <h1 class="hero__h1">A network of focused properties with shared standards, not a single blog.</h1>
+      <p class="hero__p">
+        Brandon Himpfen Media is built around durable, reusable work. Essays, templates, datasets, and open-source references,
+        organized so readers can find the right property quickly and return to it later.
+      </p>
+
+      <div class="heroChips" aria-label="Quick topics">
+        <a class="chip" href="{{ '/updates/' | relative_url }}">Latest updates</a>
+        <a class="chip" href="{{ '/about/' | relative_url }}">Studio philosophy</a>
+        <a class="chip" href="#properties">Digital properties</a>
+        <a class="chip" href="#newsletter">Get the roundup</a>
+      </div>
+
+      <div class="heroStats" aria-label="Studio facts">
+        <div class="stat">
+          <div class="stat__k">Orientation</div>
+          <div class="stat__v">Standards + reuse</div>
+        </div>
+        <div class="stat">
+          <div class="stat__k">Artifacts</div>
+          <div class="stat__v">Essays • repos • guides</div>
+        </div>
+        <div class="stat">
+          <div class="stat__k">Organization</div>
+          <div class="stat__v">By property and topic</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__art" aria-hidden="true">
+      <div class="orb orb--a"></div>
+      <div class="orb orb--b"></div>
+      <div class="orb orb--c"></div>
+
+      <div class="console">
+        <div class="console__top">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="console__title">Studio Console</span>
+        </div>
+        <div class="console__body">
+          <div class="consoleGrid">
+            <div class="tile">
+              <div class="tile__k">Routing</div>
+              <div class="tile__t">Send readers to the right property</div>
+              <div class="tile__p">Clear paths by audience and intent.</div>
+              <div class="tile__spark"></div>
+            </div>
+            <div class="tile">
+              <div class="tile__k">Standards</div>
+              <div class="tile__t">Consistent structure and credibility</div>
+              <div class="tile__p">Reusable templates and editorial norms.</div>
+              <div class="tile__spark"></div>
+            </div>
+            <div class="tile">
+              <div class="tile__k">Artifacts</div>
+              <div class="tile__t">Reusable outputs, not just posts</div>
+              <div class="tile__p">Docs, datasets, repos, references.</div>
+              <div class="tile__spark"></div>
+            </div>
+            <div class="tile">
+              <div class="tile__k">Continuity</div>
+              <div class="tile__t">A network that compounds</div>
+              <div class="tile__p">Cross-linking without collapsing identity.</div>
+              <div class="tile__spark"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="properties">
+  <div class="wrap">
+    <div class="sectionHead">
+      <h2>Digital properties</h2>
+      <p>Each property has its own voice and audience. The studio provides shared structure underneath.</p>
+    </div>
+
+    <div class="props">
+      {% for p in site.data.properties %}
+        {% include property-card.html p=p %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="updates">
+  <div class="wrap">
+    <div class="sectionHead">
+      <h2>Updates</h2>
+      <p>Recent work across the network.</p>
+    </div>
+
+    <div class="updates">
+      {% assign recent_posts = site.posts | where: "show_in_updates", true | slice: 0, 3 %}
+      {% for post in recent_posts %}
+        {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+
+    <div class="moreRow">
+      <a class="btn btn--ghost" href="{{ '/updates/' | relative_url }}">View all updates</a>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter" id="newsletter">
+  <div class="wrap newsletter__in">
+    <div class="newsletter__copy">
+      <h2>Get the roundup</h2>
+      <p>One email summarizing what shipped across the studio. Essays, tools, and meaningful updates.</p>
+    </div>
+
+    <!-- Replace this with your provider’s embed or endpoint -->
+    <form class="newsletter__form" onsubmit="return false" aria-label="Newsletter signup">
+      <input type="email" placeholder="you@example.com" required />
+      <button class="btn btn--primary" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap about">
+    <div>
+      <h2>About</h2>
+      <p>
+        Brandon Himpfen Media is a platform-first studio built around durable work. Properties remain distinct,
+        but share underlying standards so the ecosystem stays coherent and useful over time.
+      </p>
+    </div>
+    <div class="about__links">
+      <a class="inline" href="{{ '/about/' | relative_url }}">Read more</a>
+      <a class="inline" href="{{ '/updates/' | relative_url }}">Updates</a>
+      <a class="inline" href="{{ '/contact/' | relative_url }}">Contact</a>
+    </div>
+  </div>
+</section>

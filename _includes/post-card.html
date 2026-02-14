@@ -1,0 +1,16 @@
+{% assign post = include.post %}
+<article class="update">
+  <div class="update__top">
+    {% if post.property_tag %}
+      <span class="tag {{ post.property_tag_class }}">{{ post.property_tag }}</span>
+    {% else %}
+      <span class="tag tag--paper">Update</span>
+    {% endif %}
+    <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+  </div>
+  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  {% if post.excerpt %}
+    <p>{{ post.excerpt | strip_html | truncate: 140 }}</p>
+  {% endif %}
+  <a class="inline" href="{{ post.url | relative_url }}">Read →</a>
+</article>

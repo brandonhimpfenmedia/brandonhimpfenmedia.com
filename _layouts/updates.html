@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<section class="section">
+  <div class="wrap">
+    <div class="sectionHead">
+      <h2>{{ page.title }}</h2>
+      <p>All updates across the network. RSS available via the feed.</p>
+    </div>
+
+    <div class="updates updates--list">
+      {% for post in site.posts %}
+        {% if post.show_in_updates %}
+          {% include post-card.html post=post %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

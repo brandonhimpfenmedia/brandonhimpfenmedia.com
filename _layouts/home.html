@@ -2,114 +2,157 @@
 layout: default
 ---
 
-<section class="hero">
-  <div class="wrap hero__in">
-    <div class="hero__copy">
-      <p class="eyebrow">Platform-first studio</p>
-      <h1 class="hero__h1">A network of focused properties with shared standards, not a single blog.</h1>
-      <p class="hero__p">
-        Brandon Himpfen Media is built around durable, reusable work. Essays, templates, datasets, and open-source references,
-        organized so readers can find the right property quickly and return to it later.
+<section class="heroOS" id="top">
+  <div class="wrap heroOS__in">
+    <!-- Background motion layer -->
+    <div class="heroOS__bg" aria-hidden="true">
+      <div class="glow g1"></div>
+      <div class="glow g2"></div>
+      <div class="glow g3"></div>
+      <div class="gridVeil"></div>
+    </div>
+
+    <!-- Hero content -->
+    <div class="heroOS__content">
+      <p class="eyebrow">Independent publishing infrastructure</p>
+
+      <h1 class="heroOS__h1">
+        A studio that builds durable digital properties.
+      </h1>
+
+      <p class="heroOS__sub">
+        Brandon Himpfen Media is a network of focused platforms. Each property serves a distinct audience.
+        Shared standards keep the ecosystem coherent so the work compounds over time.
       </p>
 
-      <div class="heroChips" aria-label="Quick topics">
-        <a class="chip" href="{{ '/updates/' | relative_url }}">Latest updates</a>
-        <a class="chip" href="{{ '/about/' | relative_url }}">Studio philosophy</a>
-        <a class="chip" href="#properties">Digital properties</a>
-        <a class="chip" href="#newsletter">Get the roundup</a>
+      <div class="heroOS__cta">
+        <a class="btn btn--primary" href="#properties">
+          Explore the network <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="btn btn--ghost" href="{{ '/updates/' | relative_url }}">
+          Latest updates
+        </a>
       </div>
 
-      <div class="heroStats" aria-label="Studio facts">
-        <div class="stat">
-          <div class="stat__k">Orientation</div>
-          <div class="stat__v">Standards + reuse</div>
-        </div>
-        <div class="stat">
-          <div class="stat__k">Artifacts</div>
-          <div class="stat__v">Essays • repos • guides</div>
-        </div>
-        <div class="stat">
-          <div class="stat__k">Organization</div>
-          <div class="stat__v">By property and topic</div>
-        </div>
+      <!-- “Studio OS bar” -->
+      <div class="osBar" role="navigation" aria-label="Studio operating system">
+        <button class="osChip" data-filter="all">All</button>
+        <button class="osChip" data-filter="publishing">Publishing</button>
+        <button class="osChip" data-filter="research">Research</button>
+        <button class="osChip" data-filter="open-source">Open source</button>
+        <button class="osChip" data-filter="infrastructure">Infrastructure</button>
+        <button class="osChip" data-filter="systems">Systems</button>
+      </div>
+
+      <!-- Quick routing row -->
+      <div class="routeRow" aria-label="Quick routing">
+        <a class="route" href="#properties" data-route="Studio">
+          <span class="route__dot dot--studio"></span>
+          <span class="route__label">Studio</span>
+          <span class="route__hint">Principles and essays</span>
+        </a>
+        <a class="route" href="#properties" data-route="Travel">
+          <span class="route__dot dot--travel"></span>
+          <span class="route__label">Travel</span>
+          <span class="route__hint">SoloTraveler + Brandon Travel</span>
+        </a>
+        <a class="route" href="#properties" data-route="Tech">
+          <span class="route__dot dot--tech"></span>
+          <span class="route__label">Tech</span>
+          <span class="route__hint">Bold Outlook</span>
+        </a>
+        <a class="route" href="#properties" data-route="Open source">
+          <span class="route__dot dot--oss"></span>
+          <span class="route__label">Open source</span>
+          <span class="route__hint">Awesome Lists</span>
+        </a>
       </div>
     </div>
 
-    <div class="hero__art" aria-hidden="true">
-      <div class="orb orb--a"></div>
-      <div class="orb orb--b"></div>
-      <div class="orb orb--c"></div>
-
-      <div class="console">
-        <div class="console__top">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          <span class="console__title">Studio Console</span>
+    <!-- Right “studio status” panel (not a console) -->
+    <aside class="heroOS__panel" aria-label="Studio status">
+      <div class="panelCard">
+        <div class="panelCard__top">
+          <span class="tag tag--red">Studio OS</span>
+          <span class="panelCard__meta">Live index</span>
         </div>
-        <div class="console__body">
-          <div class="consoleGrid">
-            <div class="tile">
-              <div class="tile__k">Routing</div>
-              <div class="tile__t">Send readers to the right property</div>
-              <div class="tile__p">Clear paths by audience and intent.</div>
-              <div class="tile__spark"></div>
-            </div>
-            <div class="tile">
-              <div class="tile__k">Standards</div>
-              <div class="tile__t">Consistent structure and credibility</div>
-              <div class="tile__p">Reusable templates and editorial norms.</div>
-              <div class="tile__spark"></div>
-            </div>
-            <div class="tile">
-              <div class="tile__k">Artifacts</div>
-              <div class="tile__t">Reusable outputs, not just posts</div>
-              <div class="tile__p">Docs, datasets, repos, references.</div>
-              <div class="tile__spark"></div>
-            </div>
-            <div class="tile">
-              <div class="tile__k">Continuity</div>
-              <div class="tile__t">A network that compounds</div>
-              <div class="tile__p">Cross-linking without collapsing identity.</div>
-              <div class="tile__spark"></div>
-            </div>
+
+        <div class="panelStats" role="list">
+          <div class="pStat" role="listitem">
+            <div class="pStat__k">Primary interface</div>
+            <div class="pStat__v">Digital properties</div>
+          </div>
+          <div class="pStat" role="listitem">
+            <div class="pStat__k">Default behavior</div>
+            <div class="pStat__v">Route by intent</div>
+          </div>
+          <div class="pStat" role="listitem">
+            <div class="pStat__k">Output type</div>
+            <div class="pStat__v">Durable artifacts</div>
           </div>
         </div>
-      </div>
-    </div>
 
+        <div class="panelPulse" aria-hidden="true">
+          <div class="pulseLine"></div>
+          <div class="pulseLine"></div>
+          <div class="pulseLine"></div>
+        </div>
+
+        <a class="panelLink" href="#properties">
+          Open routing layer <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </aside>
   </div>
 </section>
 
-<section class="section" id="properties">
+<section class="section section--tight" id="properties">
   <div class="wrap">
-    <div class="sectionHead">
-      <h2>Digital properties</h2>
-      <p>Each property has its own voice and audience. The studio provides shared structure underneath.</p>
+    <div class="sectionHead sectionHead--stack">
+      <div>
+        <h2>Digital properties</h2>
+        <p>
+          Each property is distinct. The studio layer provides shared standards, structure, and credibility signals.
+        </p>
+      </div>
+
+      <div class="propertyTools" aria-label="Property tools">
+        <label class="sr" for="propSearch">Search properties</label>
+        <input id="propSearch" class="input" type="search" placeholder="Search properties…" />
+        <button class="btn btn--ghost btn--small" id="clearFilters" type="button">Clear</button>
+      </div>
     </div>
 
-    <div class="props">
+    <div class="props props--os" id="propertyGrid">
       {% for p in site.data.properties %}
         {% include property-card.html p=p %}
       {% endfor %}
+    </div>
+
+    <div class="routingNote">
+      <span class="tag tag--paper">Routing</span>
+      <p>
+        This homepage is an index. The properties are the product. Updates exist to show what changed.
+      </p>
     </div>
   </div>
 </section>
 
 <section class="section section--soft" id="updates">
   <div class="wrap">
-    <div class="sectionHead">
-      <h2>Updates</h2>
-      <p>Recent work across the network.</p>
+    <div class="sectionHead sectionHead--stack">
+      <div>
+        <h2>Updates</h2>
+        <p>Recent work across the network.</p>
+      </div>
+      <a class="btn btn--ghost btn--small" href="{{ '/updates/' | relative_url }}">View all</a>
     </div>
 
-    <div class="updates">
-      {% assign recent_posts = site.posts | where: "show_in_updates", true | slice: 0, 3 %}
+    <div class="updates updates--list">
+      {% assign recent_posts = site.posts | where: "show_in_updates", true | slice: 0, 6 %}
       {% for post in recent_posts %}
         {% include post-card.html post=post %}
       {% endfor %}
-    </div>
-
-    <div class="moreRow">
-      <a class="btn btn--ghost" href="{{ '/updates/' | relative_url }}">View all updates</a>
     </div>
   </div>
 </section>
@@ -121,27 +164,9 @@ layout: default
       <p>One email summarizing what shipped across the studio. Essays, tools, and meaningful updates.</p>
     </div>
 
-    <!-- Replace this with your provider’s embed or endpoint -->
     <form class="newsletter__form" onsubmit="return false" aria-label="Newsletter signup">
       <input type="email" placeholder="you@example.com" required />
       <button class="btn btn--primary" type="submit">Subscribe</button>
     </form>
-  </div>
-</section>
-
-<section class="section" id="about">
-  <div class="wrap about">
-    <div>
-      <h2>About</h2>
-      <p>
-        Brandon Himpfen Media is a platform-first studio built around durable work. Properties remain distinct,
-        but share underlying standards so the ecosystem stays coherent and useful over time.
-      </p>
-    </div>
-    <div class="about__links">
-      <a class="inline" href="{{ '/about/' | relative_url }}">Read more</a>
-      <a class="inline" href="{{ '/updates/' | relative_url }}">Updates</a>
-      <a class="inline" href="{{ '/contact/' | relative_url }}">Contact</a>
-    </div>
   </div>
 </section>

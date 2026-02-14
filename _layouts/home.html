@@ -2,23 +2,18 @@
 layout: default
 ---
 
-<section class="heroOS" id="top">
+<section class="heroOS heroOS--full" id="top">
   <div class="wrap heroOS__in">
-    <!-- Background motion layer -->
     <div class="heroOS__bg" aria-hidden="true">
-      <div class="glow g1"></div>
-      <div class="glow g2"></div>
-      <div class="glow g3"></div>
       <div class="gridVeil"></div>
+      <div class="wash w1"></div>
+      <div class="wash w2"></div>
     </div>
 
-    <!-- Hero content -->
     <div class="heroOS__content">
       <p class="eyebrow">Independent publishing infrastructure</p>
 
-      <h1 class="heroOS__h1">
-        A studio that builds durable digital properties.
-      </h1>
+      <h1 class="heroOS__h1">A studio that builds durable digital properties.</h1>
 
       <p class="heroOS__sub">
         Brandon Himpfen Media is a network of focused platforms. Each property serves a distinct audience.
@@ -34,17 +29,15 @@ layout: default
         </a>
       </div>
 
-      <!-- “Studio OS bar” -->
       <div class="osBar" role="navigation" aria-label="Studio operating system">
-        <button class="osChip" data-filter="all">All</button>
-        <button class="osChip" data-filter="publishing">Publishing</button>
-        <button class="osChip" data-filter="research">Research</button>
-        <button class="osChip" data-filter="open-source">Open source</button>
-        <button class="osChip" data-filter="infrastructure">Infrastructure</button>
-        <button class="osChip" data-filter="systems">Systems</button>
+        <button class="osChip isActive" data-filter="all" type="button">All</button>
+        <button class="osChip" data-filter="publishing" type="button">Publishing</button>
+        <button class="osChip" data-filter="research" type="button">Research</button>
+        <button class="osChip" data-filter="open-source" type="button">Open source</button>
+        <button class="osChip" data-filter="infrastructure" type="button">Infrastructure</button>
+        <button class="osChip" data-filter="systems" type="button">Systems</button>
       </div>
 
-      <!-- Quick routing row -->
       <div class="routeRow" aria-label="Quick routing">
         <a class="route" href="#properties" data-route="Studio">
           <span class="route__dot dot--studio"></span>
@@ -68,41 +61,6 @@ layout: default
         </a>
       </div>
     </div>
-
-    <!-- Right “studio status” panel (not a console) -->
-    <aside class="heroOS__panel" aria-label="Studio status">
-      <div class="panelCard">
-        <div class="panelCard__top">
-          <span class="tag tag--red">Studio OS</span>
-          <span class="panelCard__meta">Live index</span>
-        </div>
-
-        <div class="panelStats" role="list">
-          <div class="pStat" role="listitem">
-            <div class="pStat__k">Primary interface</div>
-            <div class="pStat__v">Digital properties</div>
-          </div>
-          <div class="pStat" role="listitem">
-            <div class="pStat__k">Default behavior</div>
-            <div class="pStat__v">Route by intent</div>
-          </div>
-          <div class="pStat" role="listitem">
-            <div class="pStat__k">Output type</div>
-            <div class="pStat__v">Durable artifacts</div>
-          </div>
-        </div>
-
-        <div class="panelPulse" aria-hidden="true">
-          <div class="pulseLine"></div>
-          <div class="pulseLine"></div>
-          <div class="pulseLine"></div>
-        </div>
-
-        <a class="panelLink" href="#properties">
-          Open routing layer <span aria-hidden="true">→</span>
-        </a>
-      </div>
-    </aside>
   </div>
 </section>
 

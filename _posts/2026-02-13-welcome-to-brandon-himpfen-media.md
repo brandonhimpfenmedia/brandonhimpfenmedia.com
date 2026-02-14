@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to Brandon Himpfen Media"
-date: 2026-02-14 09:00:00 -0500
+date: 2026-02-13 09:00:00 -0500
 categories: [studio]
 show_in_updates: true
 ---
